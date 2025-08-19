@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Landing Page Design System - Modern & Clean */
 
 @layer base {
   :root {
+    /* Base Colors - Neutral Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 217 19% 10%;
+    
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 217 19% 10%;
+    
+    /* Text Colors */
+    --text-hero: 217 19% 10%;
+    --text-secondary: 217 10% 45%;
+    --text-muted: 217 10% 60%;
+    
+    /* Brand Colors */
+    --primary: 217 19% 10%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Gradient Colors */
+    --gradient-primary-start: 267 84% 65%;
+    --gradient-primary-end: 217 91% 60%;
+    --gradient-secondary-start: 158 64% 52%;
+    --gradient-secondary-end: 195 85% 41%;
+    --gradient-accent-start: 43 96% 56%;
+    --gradient-accent-end: 25 95% 53%;
+    
+    /* Surface Colors */
+    --surface: 220 13% 97%;
+    --surface-hover: 220 13% 95%;
+    --border: 220 13% 91%;
+    --border-light: 220 13% 93%;
+    
+    /* Shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(217 19% 10% / 0.1), 0 1px 2px -1px hsl(217 19% 10% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(217 19% 10% / 0.1), 0 2px 4px -2px hsl(217 19% 10% / 0.1);
+    --shadow-large: 0 10px 15px -3px hsl(217 19% 10% / 0.1), 0 4px 6px -4px hsl(217 19% 10% / 0.1);
+    --shadow-glow: 0 0 0 1px hsl(267 84% 65% / 0.05), 0 10px 25px -5px hsl(267 84% 65% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gradient-primary-start)), hsl(var(--gradient-primary-end)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--gradient-secondary-start)), hsl(var(--gradient-secondary-end)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--gradient-accent-start)), hsl(var(--gradient-accent-end)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface)));
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +117,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
   }
 }

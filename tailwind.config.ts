@@ -19,49 +19,41 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Text Colors
+				'text-hero': 'hsl(var(--text-hero))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				
+				// Surface Colors
+				surface: 'hsl(var(--surface))',
+				'surface-hover': 'hsl(var(--surface-hover))',
+				
+				// Brand Colors
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
+				
+				// Card System
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				
+				// Borders
+				border: 'hsl(var(--border))',
+				'border-light': 'hsl(var(--border-light))',
+				
+				// Gradient Colors for components
+				'gradient-primary-start': 'hsl(var(--gradient-primary-start))',
+				'gradient-primary-end': 'hsl(var(--gradient-primary-end))',
+				'gradient-secondary-start': 'hsl(var(--gradient-secondary-start))',
+				'gradient-secondary-end': 'hsl(var(--gradient-secondary-end))',
+				'gradient-accent-start': 'hsl(var(--gradient-accent-start))',
+				'gradient-accent-end': 'hsl(var(--gradient-accent-end))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
